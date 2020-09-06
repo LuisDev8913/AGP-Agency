@@ -134,16 +134,26 @@ header {
   display: flex;
   flex-direction: row;
   align-items: center;
-
-  position: fixed;
-  transform-origin: left top;
-  transform: rotate(90deg) translateY(-100%) translateX(30%);
-
   font-size: 1.5em;
-  z-index: 3;
+  z-index: 2;
+
+  &:not(.icons) {
+    position: fixed;
+    transform-origin: left top;
+    transform: rotate(90deg) translateY(-100%) translateX(30%);
+
+    a {
+      margin: 24px 18px;
+    }
+
+    @include tabletM {
+      display: none;
+    }
+  }
 
   a {
-    margin: 24px 18px;
+    min-width: 30px;
+    margin: 16px;
     color: $gray;
 
     &:hover {
@@ -152,6 +162,6 @@ header {
   }
 
   @include tabletM {
-    display: none;
+    justify-content: space-around;
   }
 }

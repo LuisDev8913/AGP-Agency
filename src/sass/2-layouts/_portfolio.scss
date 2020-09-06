@@ -1,6 +1,10 @@
 section.portfolio {
   margin: 18vh auto 12vh auto;
 
+  &.preview {
+    margin: 0 auto;
+  }
+
   .section-header {
     display: flex;
     justify-content: space-between;

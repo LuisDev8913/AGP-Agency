@@ -39,11 +39,32 @@ const Main = () => (
       </div>
     </main>
 
-    {/* <section className='services'>
+    <section className='services'>
       <h3>Services</h3>
-    </section> */}
 
-    <section className='portfolio'>
+      <ul>
+        <li>
+          <div className='icon-box'>
+            <img src='./img/elements/mac.png' alt='icon' />
+          </div>
+          <h4>Web Development</h4>
+        </li>
+        <li>
+          <div className='icon-box'>
+            <img src='./img/elements/candy.png' alt='icon' />
+          </div>
+          <h4>UI/UX & Branding</h4>
+        </li>
+        <li>
+          <div className='icon-box'>
+            <img src='./img/elements/charts.png' alt='icon' />
+          </div>
+          <h4>Marketing</h4>
+        </li>
+      </ul>
+    </section>
+
+    <section className='portfolio preview'>
       <div className='section-header'>
         <h3>Featured Work</h3>
       </div>
