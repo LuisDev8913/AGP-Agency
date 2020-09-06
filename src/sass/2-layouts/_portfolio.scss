@@ -1,0 +1,98 @@
+section.portfolio {
+  margin: 18vh auto 12vh auto;
+
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 32px;
+
+    h3,
+    h2 {
+      font-family: 'Montserrat';
+      font-size: 2.5em;
+      font-weight: 900;
+    }
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 48px;
+    grid-column-gap: 16px;
+
+    .portfolio-link {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      height: auto;
+
+      .portfolio-img {
+        margin-bottom: 18px;
+
+        img {
+          width: 100%;
+          object-fit: fill;
+
+          border: solid 6px rgba(255, 255, 255, 0.4);
+          border-radius: 24px;
+          box-shadow: $shadow;
+        }
+      }
+
+      .label {
+        display: flex;
+        align-items: center;
+        margin: -4em auto 0 auto;
+        padding: 0.8em 1.5em;
+
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 32px;
+        box-shadow: $shadow;
+
+        z-index: 2;
+
+        .logo {
+          height: 3.5em;
+          padding: 0.4em;
+
+          img {
+            height: 100%;
+            object-fit: fill;
+          }
+        }
+
+        span {
+          margin-left: 12px;
+          font-size: 1.5em;
+          white-space: nowrap;
+        }
+      }
+    }
+
+    @include laptop {
+      grid-template-columns: 1fr 1fr;
+
+      &.preview .portfolio-link:nth-child(3) {
+        display: none;
+      }
+    }
+
+    @include tabletS {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .btn {
+    margin-top: 2em;
+  }
+
+  @include tabletS {
+    margin-top: 20vh;
+  }
+}

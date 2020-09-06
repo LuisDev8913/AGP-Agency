@@ -1,0 +1,157 @@
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  position: fixed;
+  top: 0;
+  padding: 2em 3em;
+  width: 100%;
+  height: 10em;
+
+  z-index: 3;
+
+  .logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+    padding: 22px 28px;
+
+    background-color: #fff;
+    border-radius: 32px;
+    box-shadow: $shadow;
+
+    span {
+      margin-left: 12px;
+      font-family: 'Montserrat';
+      font-size: 22px;
+      line-height: 24px;
+      font-weight: 800;
+    }
+
+    .img-logo {
+      height: 100%;
+
+      img {
+        object-fit: fill;
+        height: 100%;
+      }
+    }
+  }
+
+  #menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 4.5rem;
+    width: 4.5rem;
+
+    background-color: #fff;
+    border-radius: 32px;
+    box-shadow: $shadow;
+
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      color: $orange;
+    }
+
+    @include tabletS {
+      margin-right: 7px;
+    }
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    z-index: 3;
+
+    background-color: #fff;
+    border-radius: 32px;
+    box-shadow: $shadow;
+
+    position: fixed;
+    top: 8em;
+    right: 4em;
+    padding: 2.5em;
+
+    opacity: 0;
+    pointer-events: none;
+
+    transition: 0.3s ease-in-out;
+
+    a {
+      font-size: 2em;
+      margin-top: 0.25em !important;
+
+      &.active {
+        color: $orange;
+      }
+    }
+  }
+
+  @include tabletM {
+    padding: 32px;
+  }
+
+  @include tabletS {
+    width: 90%;
+    margin: 2em 5%;
+    padding: 0;
+    height: 8em;
+
+    background-color: #fff;
+    border-radius: 32px;
+    box-shadow: $shadow;
+
+    .logo {
+      background-color: transparent;
+      box-shadow: none;
+    }
+
+    #menu {
+      background-color: transparent;
+      box-shadow: none;
+    }
+
+    nav {
+      width: 90%;
+      margin: 0 5%;
+      top: 12em;
+      right: 0;
+
+      .btn {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  position: fixed;
+  transform-origin: left top;
+  transform: rotate(90deg) translateY(-100%) translateX(30%);
+
+  font-size: 1.5em;
+  z-index: 3;
+
+  a {
+    margin: 24px 18px;
+    color: $gray;
+
+    &:hover {
+      color: $orange;
+    }
+  }
+
+  @include tabletM {
+    display: none;
+  }
+}

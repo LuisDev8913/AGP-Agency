@@ -1,0 +1,42 @@
+// responsive
+@mixin laptop {
+  @media (max-width: $laptop) {
+    @content;
+  }
+}
+
+@mixin tabletL {
+  @media (max-width: $tabletL) {
+    @content;
+  }
+}
+
+@mixin tabletM {
+  @media (max-width: $tabletM) {
+    @content;
+  }
+}
+
+@mixin tabletS {
+  @media (max-width: $tabletS) {
+    @content;
+  }
+}
+
+@mixin mobileL {
+  @media (max-width: $mobileL) {
+    @content;
+  }
+}
+
+@mixin mobileM {
+  @media (max-width: $mobileM) {
+    @content;
+  }
+}
+
+@mixin mobileS {
+  @media (max-width: $mobileS) {
+    @content;
+  }
+}
