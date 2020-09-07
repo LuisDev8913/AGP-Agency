@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { dribbble, linkedin, instagram, facebook } from '../../icons/icons';
+import { dribbble, instagram, facebook } from '../../icons/icons';
 
 const Links = ({ isIcon = false }) => (
   <div className={`links ${isIcon && 'icons'}`}>
     <a
-      href='https://www.linkedin.com/in/kotovjs/'
+      href='https://dribbble.com/apostlekotov'
       target='_blank'
       rel='noopener noreferrer'
     >
@@ -15,7 +15,7 @@ const Links = ({ isIcon = false }) => (
         'dribbble'
       )}
     </a>
-    <a
+    {/* <a
       href='https://www.linkedin.com/in/kotovjs/'
       target='_blank'
       rel='noopener noreferrer'
@@ -25,9 +25,9 @@ const Links = ({ isIcon = false }) => (
       ) : (
         'linkedin'
       )}
-    </a>
+    </a> */}
     <a
-      href='https://www.instagram.com/kotov.js/'
+      href='https://www.instagram.com/agp.agency/'
       target='_blank'
       rel='noopener noreferrer'
     >
@@ -38,7 +38,7 @@ const Links = ({ isIcon = false }) => (
       )}
     </a>
     <a
-      href='https://www.instagram.com/kotov.js/'
+      href='https://www.facebook.com/agapornis.agency/'
       target='_blank'
       rel='noopener noreferrer'
     >
