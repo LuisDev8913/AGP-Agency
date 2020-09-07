@@ -17,7 +17,7 @@ const PortfolioState = (props) => {
     setLoading();
 
     const res = await axios.get(
-      'https://api.kotov.com.ua/portfolio-links?_sort=createdAt:DESC'
+      'https://api.kotov.com.ua/portfolio-links?best=true&_sort=createdAt:DESC'
     );
 
     dispatch({
