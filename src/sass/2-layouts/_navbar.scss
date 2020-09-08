@@ -161,6 +161,10 @@ header {
     }
   }
 
+  svg {
+    width: 30px;
+  }
+
   @include tabletM {
     justify-content: space-around;
   }
